@@ -1,37 +1,67 @@
-/* 
-Delcaration block::after
-
-selector{
-   property: value;
-   property2: value;
-}
-*/
-
 body {
     background-color: rgb(5, 5, 69);
     color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
-
     height: 600px;
     width: 200px;
     float: left;
-    paddling: 5px;
+    padding: 5px;
     line-height: 30px;
-
 }
 
-footer{
+footer {
     text-align: center;
     margin-right: 200px;
+    clear: both;
+    padding-top: 20px;
 }
 
-#PolarImage{
-    margin-right: 200px;
-    width: 400px;
-}
-
-h1{
+h1 {
     text-align: center;
+}
+
+main {
+    margin-left: 220px;
+    margin-right: 20px;
+}
+
+#statusMessage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd966;
+}
+
+button {
+    background-color: #1f7a8c;
+    color: white;
+    border: 2px solid #ffffff;
+    padding: 8px 16px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #555555;
+    color: #cccccc;
+}
+
+#memeArea {
+    position: relative;
+    width: 700px;
+    height: 450px;
+    margin-top: 20px;
+    border: 3px solid #ffd966;
+    background-color: rgb(20, 20, 90);
+    overflow: hidden;
+}
+
+#PolarImage {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 220px;
+    height: auto;
 }

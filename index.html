@@ -1,44 +1,65 @@
-<!-- Chris Ruth, 07/04/2026 -->
-<!-- DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
+<!-- Chris Ruth -->
+<!-- DOCTYPE tells the browser this is an HTML5 page -->
 <!DOCTYPE html>
-<!-- teh html tag goes next -->
+<!-- html is the main tag that wraps the whole page -->
 <html>
-<!-- the head section has info for the browser and search engine -->
+<!-- the head section has info for the browser -->
 
 <head>
+   <!-- sets the text that shows in the browser tab -->
    <title>CSC102 Home Page</title>
-   <!-- add a link to our css file -->
+   <!-- links my external CSS file for page styling -->
    <link rel="stylesheet" href="main.css">
-
+   <!-- links my external JavaScript file for the meme movement -->
+   <script src="code.js"></script>
 </head>
-<!-- the body section holds the text and images you want to show to the user -->
+<!-- the body section holds what the user sees on the page -->
 
 <body>
-   <!-- this section will have things like a menu or logo or page title -->
+   <!-- the header has the page title and menu -->
    <header>
+      <!-- main heading for my home page -->
       <h1>Welcome to my CSC102 Home Page</h1>
-      <!-- create a nav section to hold the menu -->
+      <!-- nav holds the links to other pages -->
       <nav>
-
+         <!-- label that tells the user these are menu links -->
          <h2>Navigation</h2>
+         <!-- link that goes to the home page -->
          <a href="index.html">Home</a>
+         <!-- makes a line break between the links -->
          <br>
+         <!-- link that goes to the boards page -->
          <a href="boards.html">Boards</a>
-
       </nav>
    </header>
 
-   <!-- p is paragraph tag: has spaving around it by default -->
-   <p>
-      <!-- img is the image tag -->
-      <img id="PolarImage" src="Polar.jpg" </p>
+   <!-- section that holds the meme controls and movement area -->
+   <main>
+      <!-- heading that describes the meme activity -->
+      <h2>Meme Mover</h2>
+      <!-- paragraph that tells the user what to do -->
+      <p>Click Start to make the meme move. Click Stop to freeze it in place.</p>
 
-      <!-- July 12 2026 -->
+      <!-- shows whether the meme is moving or stopped -->
+      <p id="statusMessage">Status: Stopped</p>
+
+      <!-- Start button calls startMeme when it is clicked -->
+      <button id="startButton" type="button" onclick="startMeme();">Start</button>
+      <!-- Stop button calls stopMeme when it is clicked -->
+      <button id="stopButton" type="button" onclick="stopMeme();" disabled>Stop</button>
+
+      <!-- box where the meme is allowed to move -->
+      <div id="memeArea">
+         <!-- my Polar meme image that will move around -->
+         <img id="PolarImage" src="Polar.jpg" alt="Polar meme">
+      </div>
+   </main>
+
+   <!-- the footer shows my name and school information -->
    <footer>
-      Chris <br> University of Advancing Technology <br> 2625 W. Baseline Road <br> Tempe, AZ 85283-1056
+      Chris Ruth <br> University of Advancing Technology <br> 2625 W. Baseline Road <br> Tempe, AZ 85283-1056
    </footer>
 
 </body>
-
 
 </html>
