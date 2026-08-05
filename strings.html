@@ -1,0 +1,77 @@
+<!-- Chris Ruth -->
+<!-- DOCTYPE tells the browser this is an HTML5 page -->
+<!DOCTYPE html>
+<!-- html wraps the whole page -->
+<html>
+<!-- the head section has info for the browser -->
+
+<head>
+   <!-- sets the text in the browser tab -->
+   <title>CSC102 Palindrome Checker</title>
+   <!-- links the shared CSS file -->
+   <link rel="stylesheet" href="main.css">
+   <!-- links the shared JavaScript file -->
+   <script src="code.js"></script>
+</head>
+<!-- the body holds what the user sees -->
+
+<body>
+   <!-- header with the page title and menu -->
+   <header>
+      <!-- main heading for this page -->
+      <h1>Palindrome Checker</h1>
+      <!-- nav holds links to other pages -->
+      <nav>
+         <!-- label for the menu -->
+         <h2>Navigation</h2>
+         <!-- link to the home page -->
+         <a href="index.html">Home</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to the boards page -->
+         <a href="boards.html">Boards</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to this palindrome page -->
+         <a href="strings.html">Strings</a>
+      </nav>
+   </header>
+
+   <!-- main area for the checker -->
+   <main>
+      <!-- short instructions for the user -->
+      <p>Type a word or phrase, then click Check. A palindrome reads the same forward and backward.</p>
+
+      <!-- result panel for creative styling -->
+      <div id="palindromePanel">
+         <!-- form collects the word or phrase -->
+         <form id="palindromeForm" onsubmit="return checkPalindromeForm();">
+            <!-- label describes the text box -->
+            <label for="userText">Enter a word or phrase:</label>
+            <!-- blank line for spacing -->
+            <br>
+            <!-- text box for the user's input -->
+            <input type="text" id="userText" name="userText">
+            <!-- blank line for spacing -->
+            <br>
+            <!-- submit button runs the palindrome check -->
+            <button type="submit">Check</button>
+            <!-- clear button lets the user try another phrase -->
+            <button type="button" onclick="clearPalindromeForm();">Clear / Try Another</button>
+            <!-- done button finishes and clears the checker -->
+            <button type="button" onclick="finishPalindromeChecker();">Done</button>
+         </form>
+
+         <!-- message area for validation and results -->
+         <p id="palindromeMessage">Enter text above to begin.</p>
+      </div>
+   </main>
+
+   <!-- footer with name and school info -->
+   <footer>
+      Chris Ruth <br> University of Advancing Technology <br> 2625 W. Baseline Road <br> Tempe, AZ 85283-1056
+   </footer>
+
+</body>
+
+</html>

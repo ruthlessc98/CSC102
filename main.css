@@ -65,3 +65,32 @@ button:disabled {
     width: 220px;
     height: auto;
 }
+
+#palindromePanel {
+    background-color: rgb(20, 20, 90);
+    border: 3px solid #ffd966;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+#palindromePanel label {
+    font-size: 18px;
+    color: #ffd966;
+}
+
+#userText {
+    width: 90%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#palindromeMessage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd966;
+    margin-top: 20px;
+    min-height: 30px;
+}
