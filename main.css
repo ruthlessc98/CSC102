@@ -94,3 +94,22 @@ button:disabled {
     margin-top: 20px;
     min-height: 30px;
 }
+
+#soundPanel {
+    background-color: rgb(20, 20, 90);
+    border: 3px solid #ffd966;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+#soundPanel h2 {
+    color: #ffd966;
+    margin-top: 0;
+}
+
+#soundPanel audio {
+    width: 100%;
+    margin-top: 10px;
+}
