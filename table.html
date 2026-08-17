@@ -1,0 +1,282 @@
+<!-- Chris Ruth -->
+<!-- DOCTYPE tells the browser this is an HTML5 page -->
+<!DOCTYPE html>
+<!-- html wraps the whole page -->
+<html>
+<!-- the head section has info for the browser -->
+
+<head>
+   <!-- sets the text in the browser tab -->
+   <title>My Robotics Engineering Degree Courses</title>
+   <!-- links the shared CSS file -->
+   <link rel="stylesheet" href="main.css">
+</head>
+<!-- the body holds what the user sees -->
+
+<body>
+   <!-- header with the page title and menu -->
+   <header>
+      <!-- main heading for this page -->
+      <h1>My Robotics Engineering Degree Courses</h1>
+      <!-- nav holds links to other pages -->
+      <nav>
+         <!-- label for the menu -->
+         <h2>Navigation</h2>
+         <!-- link to the home landing page -->
+         <a href="index.html">Home</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to the meme page -->
+         <a href="meme.html">Meme</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to the palindrome checker page -->
+         <a href="strings.html">Palindrome</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to the objectives page -->
+         <a href="boards.html">Objectives</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to this courses table page -->
+         <a href="table.html">Courses</a>
+      </nav>
+   </header>
+
+   <!-- main area for the degree courses table -->
+   <main>
+      <!-- short intro explaining what the table shows -->
+      <p>This table shows the main courses in my Robotics Engineering degree, what I expect to learn from each one, and my current progress.</p>
+
+      <!-- table holds all of my degree course information -->
+      <table id="courseTable">
+         <!-- thead holds the column titles -->
+         <thead>
+            <!-- this row lists the four column names -->
+            <tr>
+               <!-- column for the course code -->
+               <th>Course</th>
+               <!-- column for the full course name -->
+               <th>Course Name</th>
+               <!-- column for what I expect to learn -->
+               <th>What I'll Learn</th>
+               <!-- column for my completion status -->
+               <th>Completion</th>
+            </tr>
+         </thead>
+         <!-- tbody holds the course rows -->
+         <tbody>
+            <!-- category row for current and general studies -->
+            <tr class="categoryRow">
+               <!-- one cell stretches across all four columns -->
+               <td colspan="4">Current / General Studies</td>
+            </tr>
+            <!-- row for Thinking Strategies -->
+            <tr>
+               <!-- course code -->
+               <td>TCH115</td>
+               <!-- course name -->
+               <td>Thinking Strategies</td>
+               <!-- what I expect to learn -->
+               <td>Different ways to think through problems and make better decisions.</td>
+               <!-- current completion status -->
+               <td class="statusInProgress">In Progress</td>
+            </tr>
+
+            <!-- category row for foundational courses -->
+            <tr class="categoryRow">
+               <!-- one cell stretches across all four columns -->
+               <td colspan="4">Foundational Courses</td>
+            </tr>
+            <!-- row for Introduction to Programming -->
+            <tr>
+               <td>CSC102</td>
+               <td>Introduction to Programming</td>
+               <td>Basic coding and how programs work.</td>
+               <td class="statusInProgress">In Progress</td>
+            </tr>
+            <!-- row for C/C++ Programming I -->
+            <tr>
+               <td>CSC215</td>
+               <td>C/C++ Programming I</td>
+               <td>How to write programs using C and C++.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for 3D Build Tools -->
+            <tr>
+               <td>DBM100</td>
+               <td>3D Build Tools</td>
+               <td>How to create and work with 3D models.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Introduction to Robotics -->
+            <tr>
+               <td>RBT125</td>
+               <td>Introduction to Robotics</td>
+               <td>The basics of building and controlling robots.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Digital Logic Basic Processor Design -->
+            <tr>
+               <td>RBT131</td>
+               <td>Digital Logic Basic Processor Design</td>
+               <td>How computer processors and digital logic work.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Mechanisms and Materials -->
+            <tr>
+               <td>RBT205</td>
+               <td>Mechanisms and Materials</td>
+               <td>How mechanical parts, materials, and movement work.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+
+            <!-- category row for skills development courses -->
+            <tr class="categoryRow">
+               <!-- one cell stretches across all four columns -->
+               <td colspan="4">Skills Development Courses</td>
+            </tr>
+            <!-- row for Introduction to Databases -->
+            <tr>
+               <td>CSC211</td>
+               <td>Introduction to Databases</td>
+               <td>How information is stored and organized in databases.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Internet of Things -->
+            <tr>
+               <td>CSC230</td>
+               <td>Internet of Things</td>
+               <td>How connected devices communicate and work together.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for C++ Programming II -->
+            <tr>
+               <td>CSC275</td>
+               <td>C++ Programming II</td>
+               <td>More advanced programming with C++.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Big Data Essentials -->
+            <tr>
+               <td>CSC340</td>
+               <td>Big Data Essentials</td>
+               <td>How large amounts of data are stored and used.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Machine Learning -->
+            <tr>
+               <td>CSC373</td>
+               <td>Machine Learning</td>
+               <td>How computers learn patterns from data.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Data Structures and Algorithms -->
+            <tr>
+               <td>CSC382</td>
+               <td>Data Structures and Algorithms</td>
+               <td>Better ways to organize data and solve problems.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Introduction to Microcontrollers -->
+            <tr>
+               <td>RBT173</td>
+               <td>Introduction to Microcontrollers</td>
+               <td>How to program small computers that control hardware.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Embedded Programming -->
+            <tr>
+               <td>RBT211</td>
+               <td>Embedded Programming</td>
+               <td>How to write software that runs inside devices.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Introduction to Mechanical Concepts -->
+            <tr>
+               <td>RBT220</td>
+               <td>Introduction to Mechanical Concepts</td>
+               <td>Basic mechanical engineering ideas used in robotics.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+
+            <!-- category row for synthesis courses -->
+            <tr class="categoryRow">
+               <!-- one cell stretches across all four columns -->
+               <td colspan="4">Synthesis Courses</td>
+            </tr>
+            <!-- row for Artificial Intelligence -->
+            <tr>
+               <td>CSC370</td>
+               <td>Artificial Intelligence</td>
+               <td>How AI systems solve problems and make decisions.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Deep Learning -->
+            <tr>
+               <td>CSC444</td>
+               <td>Deep Learning</td>
+               <td>How neural networks learn from large amounts of data.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for ARM Embedded Programming -->
+            <tr>
+               <td>RBT310</td>
+               <td>ARM Embedded Programming</td>
+               <td>How to program ARM-based hardware.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Digital Vision and Sensor Processing -->
+            <tr>
+               <td>RBT337</td>
+               <td>Digital Vision and Sensor Processing</td>
+               <td>How robots use cameras and sensors to understand their surroundings.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Robot Navigation -->
+            <tr>
+               <td>RBT347</td>
+               <td>Robot Navigation</td>
+               <td>How robots figure out where they are and where to go.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Robotics Competition -->
+            <tr>
+               <td>RBT353</td>
+               <td>Robotics Competition</td>
+               <td>How to build and test robots for competitions.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Autonomous Aerial Vehicles -->
+            <tr>
+               <td>RBT431</td>
+               <td>Autonomous Aerial Vehicles</td>
+               <td>How self-flying drones and aircraft work.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Autonomous Ground Vehicles -->
+            <tr>
+               <td>RBT441</td>
+               <td>Autonomous Ground Vehicles</td>
+               <td>How self-driving ground robots and vehicles work.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+            <!-- row for Mechatronics -->
+            <tr>
+               <td>RBT479</td>
+               <td>Mechatronics</td>
+               <td>How mechanical, electrical, and software systems work together.</td>
+               <td class="statusNotStarted">Not Started</td>
+            </tr>
+         </tbody>
+      </table>
+   </main>
+
+   <!-- footer with name and school info -->
+   <footer>
+      Chris Ruth <br> University of Advancing Technology <br> 2625 W. Baseline Road <br> Tempe, AZ 85283-1056
+   </footer>
+
+</body>
+
+</html>

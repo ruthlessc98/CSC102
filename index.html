@@ -7,70 +7,56 @@
 
 <head>
    <!-- sets the text that shows in the browser tab -->
-   <title>CSC102 Home Page</title>
+   <title>Introduction to Programming Projects</title>
    <!-- links my external CSS file for page styling -->
    <link rel="stylesheet" href="main.css">
-   <!-- links my external JavaScript file for the meme movement -->
-   <script src="code.js"></script>
 </head>
 <!-- the body section holds what the user sees on the page -->
 
 <body>
    <!-- the header has the page title and menu -->
    <header>
-      <!-- main heading for my home page -->
-      <h1>Welcome to my CSC102 Home Page</h1>
-      <!-- nav holds the links to other pages -->
+      <!-- main heading for the landing page -->
+      <h1>Introduction to Programming Projects</h1>
+      <!-- nav holds the links to completed project pages -->
       <nav>
          <!-- label that tells the user these are menu links -->
          <h2>Navigation</h2>
-         <!-- link that goes to the home page -->
+         <!-- link that stays on the home landing page -->
          <a href="index.html">Home</a>
          <!-- makes a line break between the links -->
          <br>
-         <!-- link that goes to the boards page -->
-         <a href="boards.html">Boards</a>
+         <!-- link that goes to the meme page -->
+         <a href="meme.html">Meme</a>
          <!-- makes a line break between the links -->
          <br>
          <!-- link that goes to the palindrome checker page -->
-         <a href="strings.html">Strings</a>
+         <a href="strings.html">Palindrome</a>
+         <!-- makes a line break between the links -->
+         <br>
+         <!-- link that goes to the objectives page -->
+         <a href="boards.html">Objectives</a>
+         <!-- makes a line break between the links -->
+         <br>
+         <!-- link that goes to the courses table page -->
+         <a href="table.html">Courses</a>
       </nav>
    </header>
 
-   <!-- section that holds the meme controls and movement area -->
+   <!-- main area for the landing page content -->
    <main>
-      <!-- heading that describes the meme activity -->
-      <h2>Meme Mover</h2>
-      <!-- paragraph that tells the user what to do -->
-      <p>Click Start to make the meme move. Click Stop to freeze it in place.</p>
+      <!-- short description of the website -->
+      <p>This site contains the projects I worked on during my Introduction to Programming class.</p>
 
-      <!-- shows whether the meme is moving or stopped -->
-      <p id="statusMessage">Status: Stopped</p>
-
-      <!-- Start button calls startMeme when it is clicked -->
-      <button id="startButton" type="button" onclick="startMeme();">Start</button>
-      <!-- Stop button calls stopMeme when it is clicked -->
-      <button id="stopButton" type="button" onclick="stopMeme();" disabled>Stop</button>
-
-      <!-- box where the meme is allowed to move -->
-      <div id="memeArea">
-         <!-- my Polar meme image that will move around -->
-         <img id="PolarImage" src="Polar.jpg" alt="Polar meme">
-      </div>
-
-      <!-- section that holds the space station sound player -->
-      <div id="soundPanel">
-         <!-- heading for the sound feature -->
-         <h2>Space Station Background Sound</h2>
-         <!-- short description of the audio file -->
-         <p>Play the audio below to hear background noise from the U.S. lab on the space station.</p>
-         <!-- HTML audio player with browser Play and Pause controls -->
-         <audio controls loop>
-            <!-- links to the MP3 sound file for this assignment -->
-            <source src="us-lab-background.mp3" type="audio/mpeg">
-            <!-- fallback text if the browser cannot play the audio -->
-            Your browser does not support the audio player.
-         </audio>
+      <!-- panel that lists the completed project pages -->
+      <div id="landingPanel">
+         <!-- heading for the project list -->
+         <h2>My Projects</h2>
+         <!-- list of links to completed coursework pages -->
+         <p><a href="meme.html">Meme</a> - Moving meme image with Start and Stop controls, plus space station sound.</p>
+         <p><a href="strings.html">Palindrome</a> - Checks whether a word or phrase is a palindrome and shows text analysis.</p>
+         <p><a href="boards.html">Objectives</a> - Lists the Robotics Engineering program objectives.</p>
+         <p><a href="table.html">Courses</a> - Table of Robotics Engineering courses and completion status.</p>
       </div>
    </main>
 

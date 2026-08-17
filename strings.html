@@ -24,23 +24,31 @@
       <nav>
          <!-- label for the menu -->
          <h2>Navigation</h2>
-         <!-- link to the home page -->
+         <!-- link to the home landing page -->
          <a href="index.html">Home</a>
          <!-- line break between links -->
          <br>
-         <!-- link to the boards page -->
-         <a href="boards.html">Boards</a>
+         <!-- link to the meme page -->
+         <a href="meme.html">Meme</a>
          <!-- line break between links -->
          <br>
          <!-- link to this palindrome page -->
-         <a href="strings.html">Strings</a>
+         <a href="strings.html">Palindrome</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to the objectives page -->
+         <a href="boards.html">Objectives</a>
+         <!-- line break between links -->
+         <br>
+         <!-- link to the courses table page -->
+         <a href="table.html">Courses</a>
       </nav>
    </header>
 
    <!-- main area for the checker -->
    <main>
       <!-- short instructions for the user -->
-      <p>Type a word or phrase, then click Check. A palindrome reads the same forward and backward.</p>
+      <p>Type a word or phrase, then click Check. The page checks for a palindrome and also shows a simple text analysis.</p>
 
       <!-- result panel for creative styling -->
       <div id="palindromePanel">
@@ -48,11 +56,11 @@
          <form id="palindromeForm" onsubmit="return checkPalindromeForm();">
             <!-- label describes the text box -->
             <label for="userText">Enter a word or phrase:</label>
-            <!-- blank line for spacing -->
+            <!-- line break for spacing -->
             <br>
             <!-- text box for the user's input -->
             <input type="text" id="userText" name="userText">
-            <!-- blank line for spacing -->
+            <!-- line break for spacing -->
             <br>
             <!-- submit button runs the palindrome check -->
             <button type="submit">Check</button>
@@ -62,8 +70,12 @@
             <button type="button" onclick="finishPalindromeChecker();">Done</button>
          </form>
 
-         <!-- message area for validation and results -->
+         <!-- message area for validation and palindrome results -->
          <p id="palindromeMessage">Enter text above to begin.</p>
+         <!-- heading for the text analysis section -->
+         <h3 id="analysisHeading">Text Analysis</h3>
+         <!-- message area for letters, vowels, and length category -->
+         <p id="analysisMessage">Analysis will show here after you click Check.</p>
       </div>
    </main>
 

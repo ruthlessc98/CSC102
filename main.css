@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(5, 5, 69);
-    color: whitesmoke;
+    background-color: #0B1730;
+    color: #ECEBF0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -8,8 +8,18 @@ nav {
     height: 600px;
     width: 200px;
     float: left;
-    padding: 5px;
+    padding: 10px;
     line-height: 30px;
+    background-color: #05070D;
+}
+
+nav a {
+    color: #B5B2BA;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #F4B915;
 }
 
 footer {
@@ -17,10 +27,16 @@ footer {
     margin-right: 200px;
     clear: both;
     padding-top: 20px;
+    color: #B5B2BA;
 }
 
 h1 {
     text-align: center;
+    color: #ECEBF0;
+}
+
+h2 {
+    color: #ECEBF0;
 }
 
 main {
@@ -28,24 +44,33 @@ main {
     margin-right: 20px;
 }
 
+p {
+    color: #ECEBF0;
+}
+
 #statusMessage {
     font-size: 20px;
     font-weight: bold;
-    color: #ffd966;
+    color: #F4B915;
 }
 
 button {
-    background-color: #1f7a8c;
-    color: white;
-    border: 2px solid #ffffff;
+    background-color: #A94424;
+    color: #ECEBF0;
+    border: 2px solid #747179;
     padding: 8px 16px;
     margin-right: 10px;
     font-size: 16px;
 }
 
+button:hover {
+    background-color: #5B1020;
+}
+
 button:disabled {
-    background-color: #555555;
-    color: #cccccc;
+    background-color: #302F35;
+    color: #747179;
+    border-color: #302F35;
 }
 
 #memeArea {
@@ -53,8 +78,8 @@ button:disabled {
     width: 700px;
     height: 450px;
     margin-top: 20px;
-    border: 3px solid #ffd966;
-    background-color: rgb(20, 20, 90);
+    border: 2px solid #747179;
+    background-color: #302F35;
     overflow: hidden;
 }
 
@@ -67,8 +92,8 @@ button:disabled {
 }
 
 #palindromePanel {
-    background-color: rgb(20, 20, 90);
-    border: 3px solid #ffd966;
+    background-color: #302F35;
+    border: 2px solid #747179;
     padding: 20px;
     margin-top: 20px;
     max-width: 600px;
@@ -76,7 +101,7 @@ button:disabled {
 
 #palindromePanel label {
     font-size: 18px;
-    color: #ffd966;
+    color: #F4B915;
 }
 
 #userText {
@@ -85,19 +110,36 @@ button:disabled {
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 16px;
+    background-color: #ECEBF0;
+    color: #05070D;
+    border: 1px solid #747179;
 }
 
 #palindromeMessage {
     font-size: 20px;
     font-weight: bold;
-    color: #ffd966;
+    color: #F4B915;
     margin-top: 20px;
     min-height: 30px;
 }
 
+#analysisHeading {
+    color: #F4B915;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+#analysisMessage {
+    font-size: 18px;
+    color: #B5B2BA;
+    margin-top: 5px;
+    min-height: 70px;
+    line-height: 1.6;
+}
+
 #soundPanel {
-    background-color: rgb(20, 20, 90);
-    border: 3px solid #ffd966;
+    background-color: #302F35;
+    border: 2px solid #747179;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -105,11 +147,73 @@ button:disabled {
 }
 
 #soundPanel h2 {
-    color: #ffd966;
+    color: #F4B915;
     margin-top: 0;
 }
 
 #soundPanel audio {
     width: 100%;
     margin-top: 10px;
+}
+
+#courseTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #302F35;
+    color: #ECEBF0;
+}
+
+#courseTable th {
+    background-color: #5B1020;
+    color: #ECEBF0;
+    border: 1px solid #A94424;
+    padding: 10px;
+    text-align: left;
+}
+
+#courseTable td {
+    border: 1px solid #747179;
+    padding: 8px;
+    vertical-align: top;
+    color: #ECEBF0;
+}
+
+.categoryRow td {
+    background-color: #A94424;
+    color: #ECEBF0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.statusInProgress {
+    color: #F4B915;
+    font-weight: bold;
+}
+
+.statusNotStarted {
+    color: #B5B2BA;
+}
+
+#landingPanel {
+    background-color: #302F35;
+    border: 2px solid #747179;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 700px;
+}
+
+#landingPanel h2 {
+    color: #F4B915;
+    margin-top: 0;
+}
+
+#landingPanel a {
+    color: #F4B915;
+    text-decoration: none;
+}
+
+#landingPanel a:hover {
+    color: #A94424;
 }

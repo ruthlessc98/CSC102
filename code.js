@@ -120,8 +120,10 @@ function updateText() {
 function checkPalindromeForm() {
     // Gets the text box from the page.
     let inputBox = document.getElementById("userText");
-    // Gets the message area from the page.
+    // Gets the palindrome message area from the page.
     let messageArea = document.getElementById("palindromeMessage");
+    // Gets the text analysis message area from the page.
+    let analysisArea = document.getElementById("analysisMessage");
     // Reads the text the user typed.
     let userText = inputBox.value;
 
@@ -129,6 +131,8 @@ function checkPalindromeForm() {
     if (userText === "") {
         // Shows a validation message with innerHTML.
         messageArea.innerHTML = "Please enter a word or phrase before checking.";
+        // Clears the analysis area when validation fails.
+        analysisArea.innerHTML = "";
         // Stops the form from reloading the page.
         return false;
     }
@@ -153,6 +157,8 @@ function checkPalindromeForm() {
     if (hasNonSpace === false) {
         // Shows a validation message with innerHTML.
         messageArea.innerHTML = "Please enter letters, not only spaces.";
+        // Clears the analysis area when validation fails.
+        analysisArea.innerHTML = "";
         // Stops the form from reloading the page.
         return false;
     }
@@ -163,11 +169,14 @@ function checkPalindromeForm() {
     // Shows a different message based on the result.
     if (result === true) {
         // Tells the user the text is a palindrome.
-        messageArea.innerHTML = "\"" + userText + "\" is a palindrome.";
+        messageArea.innerHTML = "Palindrome: Yes<br>\"" + userText + "\" is a palindrome.";
     } else {
         // Tells the user the text is not a palindrome.
-        messageArea.innerHTML = "\"" + userText + "\" is not a palindrome.";
+        messageArea.innerHTML = "Palindrome: No<br>\"" + userText + "\" is not a palindrome.";
     }
+
+    // Calls the text analysis function for the same user text.
+    analyzeText(userText);
 
     // Stops the form from reloading the page.
     return false;
@@ -230,24 +239,85 @@ function isPalindrome(text) {
 function clearPalindromeForm() {
     // Gets the text box from the page.
     let inputBox = document.getElementById("userText");
-    // Gets the message area from the page.
+    // Gets the palindrome message area from the page.
     let messageArea = document.getElementById("palindromeMessage");
+    // Gets the text analysis message area from the page.
+    let analysisArea = document.getElementById("analysisMessage");
 
     // Clears the text the user typed.
     inputBox.value = "";
-    // Updates the message shown to the user.
+    // Updates the palindrome message shown to the user.
     messageArea.innerHTML = "Cleared. Enter another word or phrase.";
+    // Clears the text analysis result.
+    analysisArea.innerHTML = "Analysis will show here after you click Check.";
 }
 
 // Finishes the checker and clears the form.
 function finishPalindromeChecker() {
     // Gets the text box from the page.
     let inputBox = document.getElementById("userText");
-    // Gets the message area from the page.
+    // Gets the palindrome message area from the page.
     let messageArea = document.getElementById("palindromeMessage");
+    // Gets the text analysis message area from the page.
+    let analysisArea = document.getElementById("analysisMessage");
 
     // Clears the text the user typed.
     inputBox.value = "";
     // Shows a finished message with innerHTML.
     messageArea.innerHTML = "Finished. Thanks for using the palindrome checker.";
+    // Clears the text analysis section when finished.
+    analysisArea.innerHTML = "";
+}
+
+// Analyzes the text for letter count, vowel count, and length category.
+function analyzeText(userText) {
+    // Gets the analysis message area from the page.
+    let analysisArea = document.getElementById("analysisMessage");
+    // Starts the letter count at zero.
+    let letterCount = 0;
+    // Starts the vowel count at zero.
+    let vowelCount = 0;
+    // Starts at the first character.
+    let i = 0;
+
+    // Loops through every character in the text.
+    while (i < userText.length) {
+        // Gets one character from the text.
+        let character = userText.charAt(i);
+        // Makes the character lowercase so capitals are counted the same.
+        character = character.toLowerCase();
+
+        // Skips spaces and only counts real letters.
+        if (character !== " ") {
+            // Adds one to the letter count.
+            letterCount = letterCount + 1;
+
+            // Checks whether the character is a vowel.
+            if (character === "a" || character === "e" || character === "i" || character === "o" || character === "u") {
+                // Adds one to the vowel count.
+                vowelCount = vowelCount + 1;
+            }
+        }
+
+        // Moves to the next character.
+        i = i + 1;
+    }
+
+    // Holds the length category for the cleaned text.
+    let lengthCategory = "";
+
+    // Chooses Short, Medium, or Long based on the letter count.
+    if (letterCount <= 5) {
+        // 1 to 5 letters is Short.
+        lengthCategory = "Short";
+    } else if (letterCount <= 10) {
+        // 6 to 10 letters is Medium.
+        lengthCategory = "Medium";
+    } else {
+        // More than 10 letters is Long.
+        lengthCategory = "Long";
+    }
+
+    // Shows the analysis results using innerHTML.
+    analysisArea.innerHTML = "Letters: " + letterCount + "<br>Vowels: " + vowelCount + "<br>Length: " + lengthCategory;
 }
